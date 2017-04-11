@@ -64,7 +64,7 @@ queue(@web.Body(web.FORM) Map form) {
 
 
   queryQueue.push(id, uppaalFile, queryFile);
-
+  print("Query $id has been queued");
   return id;
 }
 

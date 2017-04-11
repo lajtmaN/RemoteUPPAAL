@@ -26,7 +26,10 @@ class Query {
 
   Query(int id, Future<ProcessResult> future) {
     this.id = id;
-    future.then((finished) => result = finished);
+    future.then((finished) {
+      result = finished;
+      print("Query $id has finished");
+    });
   }
 }
 
